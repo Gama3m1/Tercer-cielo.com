@@ -1,0 +1,487 @@
+/* ======================================================================
+   1. VARIABLES Y RESET BASE (COLORES DEL USUARIO MANTENIDOS)
+====================================================================== */
+
+:root {
+    /* Paleta de Colores de la Iglesia (Tus colores) */
+    --color-barr-nav: #000000e3;
+    --color-principal-indigo: #1A237E;      /* Azul profundo y espiritual (Indigo) */
+    --color-secundario-cielo: #0288D1;      /* Azul vibrante para interacción (Cielo) */
+    --color-acento-dorado: #ffffff;         /* Dorado para llamados a la acción y acentos divinos */
+    --color-separator: #EFFB04;
+    
+    /* Colores Neutros */
+    --color-fondo-claro-nube: #F0F8FF;      /* Fondo sereno, casi blanco */
+    --color-fondo-claro-nube2: #819efc;
+    --color-fondo-blanco: #ffffff;
+    --color-texto-oscuro: #333333;          /* Texto principal para legibilidad */
+    --color-texto-claro: #FFFFFF;           /* Texto sobre fondos oscuros */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-blanco);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario-cielo);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Subtítulos generales para secciones */
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-secundario-cielo); 
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ======================================================================
+   2. ENCABEZADO Y MENÚ (HEADER/NAV)
+====================================================================== */
+.logo-img{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    max-width: 250px; /* Ajuste para que no sea fijo y enorme en móviles */
+}
+.header {
+    background-color: var(--color-barr-nav);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo a {
+    color: var(--color-acento-dorado);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu-link {
+    color: var(--color-texto-claro);
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link.active { /* Estilo unificado para activo y hover */
+    background-color: var(--color-secundario-cielo);
+    color: var(--color-acento-dorado);
+}
+
+/* Botón del menú hamburguesa (solo visible en móvil) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-texto-claro);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* ======================================================================
+   3. BOTONES Y COMPONENTES REUTILIZABLES
+====================================================================== */
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-principal-indigo);
+    color: var(--color-texto-claro);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-fondo-claro-nube2);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    display: inline-block;
+    background-color: var(--color-secundario-cielo);
+    color: var(--color-texto-claro);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.secondary-button:hover {
+    background-color: #01579B; /* Tono más oscuro de azul secundario */
+}
+
+/* Separador dorado entre secciones */
+.separador-dorado {
+    border: none;
+    height: 5px;
+    background-color: #fdd835; /* Color dorado */
+    margin: 0;
+}
+
+/* ======================================================================
+   6. ESTILOS PÁGINA RADIO (RADIO.HTML)
+====================================================================== */
+.hero-radio {
+     background: var(--color-principal-indigo); 
+    /* background-size:cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Ajuste para el menú fijo, ya que el header es sticky ahora */
+    /* padding-top: 5rem;  */
+}
+
+.Nom-radio{
+    padding: 35px;
+    text-shadow: 6px 8px 8px rgba(31, 30, 30, 0.979);
+    color: var(--color-texto-claro);
+    font-size: 4rem;
+    border-color:var(--color-separator);
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.slogan-radio{
+    padding: 15px;
+    text-shadow: 6px 8px 8px rgba(31, 30, 30, 0.979);
+    color: var(--color-texto-claro);
+    font-size: 1.3rem;
+
+}
+
+.radio-player-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-fondo-claro-nube);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* --- Botón Howler.js --- */
+.radio-button {
+    background-color: var(--color-principal-indigo);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto; /* Centrar el botón */
+    min-width: 250px;
+}
+
+.radio-button .material-icons {
+    margin-right: 8px;
+    font-size: 1.8rem;
+}
+
+.radio-button:hover {
+    background-color: var(--color-secundario-cielo);
+    transform: translateY(-2px);
+}
+
+/* Estilo para cuando está sonando */
+.radio-button.playing {
+    background-color: var(--color-acento-dorado);
+    color: var(--color-principal-indigo);
+    font-weight: bold;
+}
+
+/* Enlace de Respaldo */
+.radio-link-external {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.radio-link-external .accent-link {
+    color: var(--color-acento-dorado); 
+    font-weight: bold;
+    text-decoration: underline; 
+    transition: color 0.3s;
+}
+
+.radio-link-external .accent-link:hover {
+    color: var(--color-secundario-cielo); 
+    text-decoration: none; 
+}
+
+
+/* --- Visor de Página Externa (iframe) --- */
+.external-page-wrapper {
+    max-width: 1000px; 
+    margin: 2rem auto;
+    position: relative;
+    height: 700px; /* Altura fija para simular una página web */
+    overflow: hidden;
+    background-color: var(--color-fondo-claro-nube); 
+    border: 8px solid var(--color-principal-indigo); 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.external-page-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.small-note {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* --- Tabla de Programación --- */
+.schedule-table-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    overflow-x: auto; 
+    border: 1px solid var(--color-secundario-cielo);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse; 
+    text-align: left;
+    min-width: 500px;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table thead th {
+    background-color: var(--color-principal-indigo);
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.schedule-table tbody tr:nth-child(odd) {
+    background-color: var(--color-fondo-claro-nube);
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f0f0f8;
+}
+
+.schedule-table .highlight {
+    background-color: var(--color-acento-dorado);
+    color: var(--color-principal-indigo);
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid var(--color-principal-indigo);
+}
+
+.schedule-table tbody td:nth-child(2),
+.schedule-table tbody td:nth-child(3) {
+    text-align: center;
+}
+
+
+/* ======================================================================
+   8. REDES SOCIALES Y FOOTER
+====================================================================== */
+
+.social-media-links {
+    background-color: var(--color-principal-indigo);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 35px; 
+}
+
+.social-list a {
+    color: var(--color-texto-claro); 
+    font-size: 2.2rem; 
+    transition: color 0.3s;
+    line-height: 1; 
+}
+
+/* Efectos de Hover con Colores de Marca (Se mantiene el estilo de tu CSS) */
+.social-list a[aria-label="Facebook"]:hover { color: var(--color-texto-claro); }
+.social-list a[aria-label="TikTok"]:hover { color: #000000; } 
+.social-list a[aria-label="YouTube"]:hover { color: #ff0000; }
+
+
+footer {
+    background-color: var(--color-secundario-cielo);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+
+/* ======================================================================
+   9. MEDIA QUERIES (RESPONSIVIDAD)
+====================================================================== */
+
+@media (max-width: 900px) {
+    .acerca-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .acerca-image, .acerca-text {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* --- Menú Hamburguesa --- */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        background-color: var(--color-principal-indigo);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    /* Usamos la clase 'visible' que usa tu JS */
+    .nav-menu.visible {
+        display: flex;
+        height: auto !important; /* Permitimos que tome la altura necesaria */
+    }
+
+    .nav-menu li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-menu-link {
+        display: block;
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    /* --- General --- */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .hero { height: 50vh; }
+    
+    /* Ajustes específicos para móviles agregados */
+    .igle-nom {
+        font-size: 3rem; /* Reducir tamaño gigante */
+    }
+    .juan-cap {
+        font-size: 1.5rem; /* Reducir versículo */
+        padding: 1rem;
+    }
+    .juan-cap1 {
+        font-size: 1.2rem;
+    }
+
+    .content-section { padding: 3rem 1rem; }
+
+    /* --- Quiénes Somos --- */
+    .mission-vision-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .identity-card {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* --- Tabla de Programación --- */
+    .schedule-table-container {
+        overflow-x: scroll;
+    }
+    .schedule-table {
+        min-width: 600px; 
+    }
+    
+    /* --- Visor de Página Externa --- */
+    .external-page-wrapper {
+        height: 500px;
+    }
+
+    /* --- Redes Sociales --- */
+    .social-list {
+        gap: 25px;
+    }
+    .social-list a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+    .cta-button { padding: 10px 20px; font-size: 0.9rem; }
+}

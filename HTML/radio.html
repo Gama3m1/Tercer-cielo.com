@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Impacto Pachuca - Radio Online</title>
+    
+    <link rel="stylesheet" href="../CSS/radio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-img">
+            <a href="../INDEX.HTML"><img src="../IMG/Recurso 1BCO.png" alt="Tercer Cielo Central" ></a>
+        </div>
+        <nav class="nav">
+            <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button> 
+            <ul class="nav-menu">
+                <li><a href="../INDEX.HTML" class="nav-menu-link">Inicio</a></li>
+                <li><a href="radio.html" class="nav-menu-link">Radio</a></li> 
+                <li><a href="QS.html" class="nav-menu-link" target="_blank">Quiénes Somos</a></li>
+                <!-- <li><a href="../INDEX.HTML#acerca" class="nav-menu-link">Acerca</a></li> -->
+                <!-- <li><a href="../INDEX.HTML#ubicaciones" class="nav-menu-link">Ubicaciones</a></li> -->
+                <!-- <li><a href="../INDEX.HTML#galeria" class="nav-menu-link">Galería</a></li> -->
+                <li><a href="../INDEX.HTML#en-vivo" class="nav-menu-link">En Vivo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="radio-hero" class="hero-radio">
+            <h1 class="Nom-radio">Radio Impacto Pachuca</h1>
+            <p class="slogan-radio">Tu estación de fe y palabra, 24 horas al día.</p>
+        </section>
+        <hr class="separador-dorado">
+
+        <section id="reproductor" class="content-section">
+            <!-- <h2>▶️ Radio Impacto Pachuca</h2> -->
+            <p class="subtitle">Escucha nuestro stream en vivo.</p>
+            
+            <!-- <div class="radio-player-container">
+                
+                <button id="radio-play-btn" class="radio-button">
+                    <i class="material-icons">play_arrow</i> Iniciar Transmisión
+                </button>
+                
+                <div class="radio-info" style="margin-top: 2rem;">
+                    <h3>¡Estamos al Aire!</h3>
+                    <p>Sintoniza ahora mismo: **Programa de Crecimiento Espiritual**</p>
+                    
+                    <p class="radio-link-external">
+                        ¿No puedes escuchar? <a href="https://hablemosde.radio12345.com/" target="_blank" class="accent-link">Visita nuestra página oficial</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visor-radio" class="content-section light-blue-bg">
+            <h2>🌐 Página Oficial de la Radio</h2>
+            <p class="subtitle">Explora la página de Radio Impacto Pachuca sin salir de nuestro sitio.</p> -->
+
+            <div class="external-page-wrapper">
+                
+                <iframe
+                    src="https://hablemosde.radio12345.com/" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allowfullscreen
+                    sandbox="allow-same-origin allow-scripts allow-forms"> 
+                </iframe>
+                
+            </div>
+            
+            <p class="small-note">
+                <a href="https://hablemosde.radio12345.com/" target="_blank">Abrir página en pestaña completa</a>
+            </p>
+            
+        </section>
+        <hr class="separador-dorado">
+
+        <section id="programacion" class="content-section">
+            <h2>📅 Programación de la Semana</h2>
+            <p class="subtitle">Conoce nuestros programas y horarios para que no te pierdas nada.</p>
+            
+            <div class="schedule-table-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Hora (MX)</th>
+                            <th>Programa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <td>Lunes</td> <td>8:00 AM</td> <td>Café y Palabra</td> </tr>
+                        <tr> <td>Martes</td> <td>7:00 PM</td> <td>Estudio Bíblico Profundo</td> </tr>
+                        <tr> <td>Miércoles</td> <td>6:00 AM</td> <td>Oración Matutina</td> </tr>
+                        <tr> <td>Jueves</td> <td>9:00 PM</td> <td>Testimonios de Fe</td> </tr>
+                        <tr> <td>Viernes</td> <td>7:00 PM</td> <td>Jóvenes Conectados</td> </tr>
+                        <tr> <td>Sábado</td> <td>10:00 AM</td> <td class="highlight">Preparación para el Servicio (Música)</td> </tr>
+                        <tr> <td>Domingo</td> <td>11:00 AM</td> <td class="highlight">SERVICIO EN VIVO (Transmisión Central)</td> </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="social-media-links">
+        <ul class="social-list">
+            <li><a href="https://www.facebook.com/ImpactoICPM" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.tiktok.com/@impactodelcielopachuca?_r=1&_t=ZS-922vt1xZtlH" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCRWobjbNkj4HmezPz8faa4Q" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+
+    <footer>
+         <p>&copy; 2025 Tercer Cielo Central. Todos los derechos reservados.®</p>
+    </footer>
+
+    <script src="../JS/app.js"></script>
+
+</body>
+</html>
